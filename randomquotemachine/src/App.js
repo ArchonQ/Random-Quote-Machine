@@ -1,22 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
+import Button from "./Components/button";
 import "./App.css";
 
 function App() {
+  const nextQuoteHandler = () => {
+    console.log("hi");
+  };
   return (
     <div className="App" id="quote-box">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>this is sparta!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteHandler} />
     </div>
   );
 }
