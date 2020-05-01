@@ -25,6 +25,16 @@ class App extends Component {
       );
   }
 
+  get selectedQuote() {
+    if (
+      !this.state.quotes.length ||
+      !Number.isInteger(this.state.selectedQuoteIndex)
+    ) {
+      return;
+    }
+    return this.state.quotes[this.state.selectedQuoteIndex];
+  }
+
   selectQuoteIndex() {
     if (!this.state.quotes.length) {
       return;
@@ -37,6 +47,9 @@ class App extends Component {
     console.log(this.state.selectedQuoteIndex);
     return (
       <div className="App" id="quote-box">
+        {this.selectedQuote
+          ? `"${this.selectedQuote.quote}" - "${this.selectedQuote.author}"`
+          : ""}
         <Button
           buttonDisplayName="Next Quote"
           clickHandler={this.nextQuoteClickHandler}
