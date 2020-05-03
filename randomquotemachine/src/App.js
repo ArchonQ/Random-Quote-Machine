@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { random } from "lodash";
-import Button from "./Components/button";
 import "./App.css";
+import QuoteMachine from "./Components/QuoteMachine";
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
       selectedQuoteIndex: null,
     };
     this.assignNewQuoteIndex = this.assignNewQuoteIndex.bind(this);
-    this.selectQuoteIndex = this.selectQuoteIndex.bind(this);
+    this.generateNewQuoteIndex = this.generateNewQuoteIndex.bind(this);
   }
 
   componentDidMount() {
@@ -27,32 +27,32 @@ class App extends Component {
       !this.state.quotes.length ||
       !Number.isInteger(this.state.selectedQuoteIndex)
     ) {
-      return;
+      return undefined;
     }
     return this.state.quotes[this.state.selectedQuoteIndex];
   }
-
-  selectQuoteIndex() {
+  /*
+Returns an integer representing an index in state.quotes
+if stat.quotes is empty, returns undefined
+*/
+  generateNewQuoteIndex() {
     if (!this.state.quotes.length) {
-      return;
+      return undefined;
     } else {
       return random(0, this.state.quotes.length - 1);
     }
   }
 
   assignNewQuoteIndex() {
-    this.setState({ selectedQuoteIndex: this.selectQuoteIndex() });
+    this.setState({ selectedQuoteIndex: this.generateNewQuoteIndex() });
   }
   render() {
     console.log(this.state.selectedQuoteIndex);
     return (
       <div className="App" id="quote-box">
-        {this.selectedQuote
-          ? `"${this.selectedQuote.quote}" - "${this.selectedQuote.author}"`
-          : ""}
-        <Button
-          buttonDisplayName="Next Quote"
-          clickHandler={this.assignNewQuoteIndex}
+        <QuoteMachine
+          selectedQuote={this.selectedQuote}
+          assignNewQuoteIndex={this.assignNewQuoteIndex}
         />
       </div>
     );
