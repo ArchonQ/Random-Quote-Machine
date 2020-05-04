@@ -16,10 +16,19 @@ const QuoteMachine = ({ assignNewQuoteIndex, selectedQuote }) => (
       </Typography>
 
       <CardActions>
-        <Button id="new-quote" size="small" onClick={assignNewQuoteIndex}>
+        <Button
+          variant="outlined"
+          color="primary"
+          className="button"
+          id="new-quote"
+          size="small"
+          onClick={assignNewQuoteIndex}
+        >
           Next Quote
         </Button>
         <IconButton
+          variant="outlined"
+          color="primary"
           id="tweet-quote"
           target="_blank"
           href={`https://twitter.com/intent/tweet?text=${selectedQuote.quote}&hashtags=thewebdevcoach`}

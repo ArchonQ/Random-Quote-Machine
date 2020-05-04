@@ -9,6 +9,11 @@ const styles = {
     display: "flex",
     height: "100vh",
     alignItems: "center",
+    backgroundImage: 'url("https://wallpaperaccess.com/full/355010.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
   },
 };
 
@@ -56,7 +61,6 @@ if stat.quotes is empty, returns undefined
     this.setState({ selectedQuoteIndex: this.generateNewQuoteIndex() });
   }
   render() {
-    console.log(this.state.selectedQuoteIndex);
     return (
       <Grid
         className={this.props.classes.container}
