@@ -31,7 +31,9 @@ const QuoteMachine = ({ assignNewQuoteIndex, selectedQuote }) => (
           color="primary"
           id="tweet-quote"
           target="_blank"
-          href={`https://twitter.com/intent/tweet?text=${selectedQuote.quote}&hashtags=thewebdevcoach`}
+          href={encodeURI(
+            `https://twitter.com/intent/tweet?text=${selectedQuote.quote}&hashtags=ThePowerOfInspiration`
+          )}
         >
           <FontAwesomeIcon icon={faTwitter} size="sm"></FontAwesomeIcon>
         </IconButton>
