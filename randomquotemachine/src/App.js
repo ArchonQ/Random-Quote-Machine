@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import { random } from "lodash";
-import "./App.css";
+import "typeface-roboto";
+import { Grid, withStyles } from "@material-ui/core";
 import QuoteMachine from "./Components/QuoteMachine";
+
+const styles = {
+  container: {
+    display: "flex",
+    height: "100vh",
+    alignItems: "center",
+  },
+};
 
 class App extends Component {
   constructor(props) {
@@ -49,25 +58,21 @@ if stat.quotes is empty, returns undefined
   render() {
     console.log(this.state.selectedQuoteIndex);
     return (
-      <div className="App" id="quote-box">
-        <QuoteMachine
-          selectedQuote={this.selectedQuote}
-          assignNewQuoteIndex={this.assignNewQuoteIndex}
-        />
-      </div>
+      <Grid
+        className={this.props.classes.container}
+        id="quote-box"
+        justify="center"
+        container
+      >
+        <Grid xs={11} lg={8} item>
+          <QuoteMachine
+            selectedQuote={this.selectedQuote}
+            assignNewQuoteIndex={this.assignNewQuoteIndex}
+          />
+        </Grid>
+      </Grid>
     );
   }
 }
 
-// function App() {
-//   const nextQuoteHandler = () => {
-//     console.log("hi");
-//   };
-//   return (
-//     <div className="App" id="quote-box">
-//       <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteHandler} />
-//     </div>
-//   );
-// }
-
-export default App;
+export default withStyles(styles)(App);
