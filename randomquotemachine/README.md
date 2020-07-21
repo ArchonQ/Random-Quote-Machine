@@ -54,4 +54,4 @@ I can tweet the current quote by clicking on the #tweet-quotea element. This a e
 
 The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
 
-working site can be found here: https://dreamy-engelbart-aade2c.netlify.app/
+Working site can be found here: https://dreamy-engelbart-aade2c.netlify.app/
