@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FCC-Random-Quote-Machine
 
-## Available Scripts
+FreeCodeCamp Front End Libraries Projects 1-5
 
-In the project directory, you can run:
+Project #1: **Random Quote Machine**
 
-### `yarn start`
+## FreeCodeCamp Project Requirements:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
 
-### `yarn test`
+### User Story #1:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I can see a wrapper element with a corresponding id="quote-box".
 
-### `yarn build`
+### User Story #2:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Within #quote-box, I can see an element with a corresponding id="text".
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### User Story #3:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Within #quote-box, I can see an element with a corresponding id="author".
 
-### `yarn eject`
+### User Story #4:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Within #quote-box, I can see a clickable element with a corresponding id="new-quote".
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### User Story #5:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Within #quote-box, I can see a clickable a element with a corresponding id="tweet-quote".
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### User Story #6:
 
-## Learn More
+On first load, my quote machine displays a random quote in the element with id="text".
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### User Story #7:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+On first load, my quote machine displays the random quote's author in the element with id="author".
 
-### Code Splitting
+### User Story #8:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.
 
-### Analyzing the Bundle Size
+### User Story #9:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.
 
-### Making a Progressive Web App
+### User Story #10:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+I can tweet the current quote by clicking on the #tweet-quotea element. This a element should include the "twitter.com/intent/tweet" path in its href attribute to tweet the current quote.
 
-### Advanced Configuration
+### User Story #11:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+working site can be found here: https://dreamy-engelbart-aade2c.netlify.app/
